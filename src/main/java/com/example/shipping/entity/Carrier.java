@@ -1,5 +1,6 @@
 package com.example.shipping.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -29,6 +30,7 @@ public class Carrier {
     private Boolean active = true;
 
     @OneToMany(mappedBy = "carrier", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonBackReference
     private List<Shipment> shipments;
 
     public Carrier() {}

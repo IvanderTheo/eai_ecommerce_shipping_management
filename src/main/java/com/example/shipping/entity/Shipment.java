@@ -1,5 +1,6 @@
 package com.example.shipping.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -43,6 +44,7 @@ public class Shipment {
     private List<Parcel> parcels;
 
     @OneToMany(mappedBy = "shipment", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonBackReference
     private List<TrackingHistory> trackingHistories;
 
     public Shipment() {}

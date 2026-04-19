@@ -1,5 +1,6 @@
 package com.example.shipping.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public class Parcel {
 
     @ManyToOne
     @JoinColumn(name = "shipment_id", nullable = false)
+    @JsonBackReference
     private Shipment shipment;
 
     @Column(nullable = false)

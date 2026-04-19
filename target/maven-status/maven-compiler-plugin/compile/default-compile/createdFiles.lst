@@ -1,6 +1,12 @@
 com\example\shipping\controller\ShippingAddressController.class
+com\example\shipping\dto\CarrierResponse.class
+com\example\shipping\dto\ShipmentResponse.class
 com\example\shipping\repository\TrackingHistoryRepository.class
+com\example\shipping\dto\ApiResponse.class
 com\example\shipping\repository\ShippingAddressRepository.class
+com\example\shipping\dto\TrackingHistoryResponse.class
+com\example\shipping\dto\ShippingAddressResponse.class
+com\example\shipping\util\DtoMapper.class
 com\example\shipping\entity\Shipment.class
 com\example\shipping\service\ShippingAddressService.class
 com\example\shipping\entity\Parcel.class
@@ -11,6 +17,7 @@ com\example\shipping\repository\CarrierRepository.class
 com\example\shipping\controller\ShipmentController.class
 com\example\shipping\entity\TrackingHistory.class
 com\example\shipping\DataInitializer.class
+com\example\shipping\dto\ParcelResponse.class
 com\example\shipping\entity\ShippingAddress.class
 com\example\shipping\dto\ShippingAddressRequest.class
 com\example\shipping\dto\CarrierRequest.class

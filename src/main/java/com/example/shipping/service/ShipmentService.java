@@ -5,6 +5,8 @@ import com.example.shipping.dto.PackageRequest;
 import com.example.shipping.entity.*;
 import com.example.shipping.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
@@ -31,6 +33,10 @@ public class ShipmentService {
 
     public List<Shipment> getAllShipments() {
         return shipmentRepository.findAll();
+    }
+
+    public Page<Shipment> getAllShipmentsPaginated(Pageable pageable) {
+        return shipmentRepository.findAll(pageable);
     }
 
     public Shipment getShipmentById(Long id) {
